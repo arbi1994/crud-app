@@ -1,0 +1,24 @@
+{
+  "name": "local-crud-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arbi1994/crud-app.git"
+  },
+  "author": "Arber",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arbi1994/crud-app/issues"
+  },
+  "homepage": "https://github.com/arbi1994/crud-app#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.14",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0"
+  }
+}
