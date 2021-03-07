@@ -1,0 +1,33 @@
+@import "../abstracts/index";
+
+.display-data {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem;
+  width: calc(100vw - 4rem);
+  background: white;
+  color: black;
+  font-size: 1rem;
+  //@include alignCenter(flex-start, column);
+}
+.output {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  .details {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    h3 {
+      flex: 0 0 10rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+    }
+    h4 {
+      flex: 0 0 5rem;
+      font-size: 1rem;
+      font-weight: lighter;
+      padding-left: 1rem;
+    }
+  }
+}

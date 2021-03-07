@@ -1,0 +1,25 @@
+// @import "../abstracts/mixins";
+// @import "../abstracts/media-queries";
+// @import "../abstracts/colors";
+@import "../abstracts/index";
+
+@media #{$media-phone} {
+  .user-input {
+    width: calc(100vw - 4rem);
+    padding: 2rem;
+    @include alignCenter(space-between, row);
+    box-shadow: 0 0 20px 2px $boxShadowColor;
+    background: $backgroundColor;
+    position: relative;
+    //overflow: hidden;
+    button {
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      border: none;
+      color: $backgroundColor;
+      background: $textBoxColor;
+      cursor: pointer;
+    } 
+  }
+}
+

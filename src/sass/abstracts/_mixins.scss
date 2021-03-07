@@ -1,0 +1,7 @@
+//flexbox center alignment
+@mixin alignCenter($justify-content, $flex-direction) {
+    display: flex;
+    justify-content: $justify-content;
+    align-items: center;
+    flex-direction: $flex-direction;
+}

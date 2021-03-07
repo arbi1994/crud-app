@@ -1,0 +1,74 @@
+/* Mobile view small */
+/* Mobile view */
+/* Tablet view */
+/* Desktop view */
+@media only screen and (max-width: 600px) {
+  .user-input {
+    width: calc(100vw - 4rem);
+    padding: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    box-shadow: 0 0 20px 2px rgba(67, 155, 163, 0.5);
+    background: #439ba3;
+    position: relative; }
+    .user-input button {
+      padding: 1rem 2rem;
+      font-size: 1.4rem;
+      border: none;
+      color: #439ba3;
+      background: #e4e4e4;
+      cursor: pointer; } }
+
+/* Mobile view small */
+/* Mobile view */
+/* Tablet view */
+/* Desktop view */
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  flex-direction: column;
+  position: relative; }
+
+/* Mobile view small */
+/* Mobile view */
+/* Tablet view */
+/* Desktop view */
+.display-data {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: 2rem;
+  width: calc(100vw - 4rem);
+  background: white;
+  color: black;
+  font-size: 1rem; }
+
+.output {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 2rem; }
+  .output .details {
+    display: flex;
+    align-items: center;
+    width: 100%; }
+    .output .details h3 {
+      flex: 0 0 10rem;
+      font-size: 1.2rem;
+      font-weight: 600; }
+    .output .details h4 {
+      flex: 0 0 5rem;
+      font-size: 1rem;
+      font-weight: lighter;
+      padding-left: 1rem; }
