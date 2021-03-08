@@ -39,12 +39,14 @@ const initData = () => {
     }
 }
 
+
 /* ADD DATA */
 const addData = () => {
-    const fName = document.querySelector(".f_name").value,
-          lName = document.querySelector(".l_name").value,
-          DOB = document.querySelector(".dob").value,
-          pass = document.querySelector(".passport").value
+    
+const fName = document.querySelector(".f_name").value,
+lName = document.querySelector(".l_name").value,
+DOB = document.querySelector(".dob").value,
+pass = document.querySelector(".passport").value
 
     const name = fName,
           surname = lName,
@@ -68,7 +70,6 @@ load.addEventListener("click", (e) => {
 //open form to add data
 const form = document.querySelector("form .content")
 const add = document.querySelector(".add-data")
-
 add.addEventListener('click', () => {
     form.classList.toggle("open")
 })
@@ -78,6 +79,7 @@ const submit = document.querySelector(".submit")
 submit.addEventListener("click", (e) => {
     e.preventDefault()
     addData()
-    form.classList.remove("open")
+    form.classList.remove("open") 
+    console.log(data.length)
 })
 

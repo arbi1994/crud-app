@@ -67,7 +67,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -2; }
+  z-index: -1; }
 
 .output {
   display: block;
@@ -93,7 +93,8 @@ body {
 /* Desktop view */
 form {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  min-height: 100vh; }
   form .content {
     width: calc(100vw - 4rem);
     padding: 2rem;
@@ -132,6 +133,6 @@ form {
         cursor: pointer;
         border: none;
         background: #e4e4e4;
-        transition: all 0.3s ease; }
+        transition: background 0.3s ease; }
         form .content .add .submit:hover {
           background: #eeecec; }

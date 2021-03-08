@@ -3,6 +3,7 @@
 form {
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
   .content {
     width: calc(100vw - 4rem);
     padding: 2rem;
@@ -42,7 +43,7 @@ form {
         cursor: pointer;
         border: none;
         background: $textBoxColor;
-        transition: all 0.3s ease;
+        transition: background 0.3s ease;
         &:hover {
           background: $hoverBackColor;
         }
