@@ -8,7 +8,7 @@
     width: calc(100vw - 4rem);
     padding: 2rem;
     @include alignCenter(space-between, row);
-    box-shadow: 0 0 20px 2px $boxShadowColor;
+    box-shadow: 0 0 10px 2px $boxShadowColor;
     background: $backgroundColor;
     position: relative;
     //overflow: hidden;
@@ -19,7 +19,19 @@
       color: $backgroundColor;
       background: $textBoxColor;
       cursor: pointer;
-    } 
+      transition: all 0.3s ease;
+      &:hover {
+        background: $hoverBackColor;
+      }
+    }
+    .add {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+      color: black;
+    }
   }
 }
-

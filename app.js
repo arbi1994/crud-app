@@ -18,8 +18,11 @@ const data = [
 const initData = () => {
     const display = document.createElement("div");
     display.className = "display-data";
-    const body = document.querySelector("body");
-    body.appendChild(display);
+    const form = document.querySelector("form")
+    //const body = document.querySelector("body");
+    form.appendChild(display);
+
+    display.innerHTML = ""
 
     //loop through data
     for(person of data){
@@ -38,12 +41,43 @@ const initData = () => {
 
 /* ADD DATA */
 const addData = () => {
-   
+    const fName = document.querySelector(".f_name").value,
+          lName = document.querySelector(".l_name").value,
+          DOB = document.querySelector(".dob").value,
+          pass = document.querySelector(".passport").value
+
+    const name = fName,
+          surname = lName,
+          dob = DOB,
+          passport = pass
+
+    const newPerson = {name, surname, passport, dob}
+    data.push(newPerson)
+    initData()
 }
 
 /* Set the event listeners */
+
+//load data
 let load = document.querySelector(".load-data");
 load.addEventListener("click", (e) => {
     initData()
     load.disabled = true
 });
+
+//open form to add data
+const form = document.querySelector("form .content")
+const add = document.querySelector(".add-data")
+
+add.addEventListener('click', () => {
+    form.classList.toggle("open")
+})
+
+//submit data
+const submit = document.querySelector(".submit")
+submit.addEventListener("click", (e) => {
+    e.preventDefault()
+    addData()
+    form.classList.remove("open")
+})
+
