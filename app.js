@@ -1,5 +1,3 @@
-
-
 /* CREATE DATA */
 const data = [
     {
@@ -42,7 +40,7 @@ const initData = () => {
         //append it to display box
         display.appendChild(div)
         //display data
-        div.innerHTML = `<div class="details"><h3>First Name:</h3><h4>${person.name}</h4></div> 
+        div.innerHTML =`<div class="details"><h3>First Name:</h3><h4>${person.name}</h4></div> 
                         <div class="details"><h3>Last Name:</h3><h4>${person.surname}</h4></div> 
                         <div class="details"><h3>Date of Birth:</h3><h4>${person.dob}</h4></div> 
                         <div class="details"><h3>Passport:</h3><h4>${person.passport}</h4></div>`
@@ -54,11 +52,13 @@ const initData = () => {
             //remove data
             if(div.classList.contains("selected")){
                 const deleteBtn = document.querySelector(".remove-data")
-                //link delete button id to the index of the element selected
-                deleteBtn.id = index
+                
                 //delete selected
                 deleteBtn.addEventListener("click", () => {
-                    deleteData()
+                    //remove data from the array
+                    data.splice(index, 1)
+                    //re initialize data
+                    initData()
                 })
             }
         })       
@@ -69,37 +69,19 @@ const initData = () => {
 /* ADD DATA */
 const addData = () => {
     
-const fName = document.querySelector(".f_name").value,
-lName = document.querySelector(".l_name").value,
-DOB = document.querySelector(".dob").value,
-pass = document.querySelector(".passport").value
+    const fName = document.querySelector(".f_name").value,
+    lName = document.querySelector(".l_name").value,
+    DOB = document.querySelector(".dob").value,
+    pass = document.querySelector(".passport").value
 
     const name = fName,
-          surname = lName,
-          dob = DOB,
-          passport = pass
+            surname = lName,
+            dob = DOB,
+            passport = pass
 
     const newPerson = {name, surname, passport, dob}
     data.push(newPerson)
     initData()
-}
-
-/* DELETE DATA */
-const deleteData = () => {
-    
-    //check if there is something in the array
-    if(data.length > 0){
-        initData()
-    }else{
-        const data = [];
-    }
-
-    //remove selected data
-    data.forEach((index) => {
-        //remove from the array
-        data.splice(index, 1)
-        initData()
-    })
 }
 
 /* Set the event listeners */
