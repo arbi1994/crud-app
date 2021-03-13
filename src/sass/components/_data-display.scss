@@ -1,21 +1,23 @@
 @import "../abstracts/index";
 
 .display-data {
-  border: 1px solid black;
   padding: 2rem;
   width: calc(100vw - 4rem);
   background: white;
   color: black;
   font-size: 1rem;
   position: absolute;
-  top: 0;
+  top: 150px;
   left: 0;
-  z-index: -1;
 }
 .output {
   display: block;
   font-size: 1rem;
   margin-bottom: 2rem;
+  cursor: pointer;
+  &.selected{
+    background: #abdaca;
+  }
   .details {
     display: flex;
     align-items: center;
@@ -33,3 +35,4 @@
     }
   }
 }
+

@@ -1,9 +1,9 @@
 @import "../abstracts/index";
 
 form {
-  position: relative;
   overflow: hidden;
-  min-height: 100vh;
+  z-index: 1;
+  visibility: hidden;
   .content {
     width: calc(100vw - 4rem);
     padding: 2rem;
@@ -11,8 +11,9 @@ form {
     align-items: flex-start;
     background: $backgroundColor;
     transform: translateY(-100%);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
     &.open {
+      visibility: visible;
       transform: translateY(0);
     }
     .data {
